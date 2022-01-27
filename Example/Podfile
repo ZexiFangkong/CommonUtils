@@ -1,16 +1,138 @@
-use_frameworks!
+source 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hello_specs.git'
+source 'https://cdn.cocoapods.org/'
 
-platform :ios, '9.0'
+use_frameworks! :linkage => :static
+
+platform :ios, '11.0'
+
+def helloLoginPods
+  pod 'libpag', '3.2.7.34'
+  pod 'GoogleSignIn', '4.4.0'
+  pod 'Firebase/Analytics'
+  pod 'AgoraRtcEngine_iOS', '3.4.8'
+  pod 'UserLeapKit', '~> 4.3.0'  # 调查问卷
+
+  pod 'Branch', '1.39.4'
+  pod 'AppsFlyerFramework', '~> 6.4.0', :modular_headers => false
+  
+  pod 'SSZipArchive', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/ssziparchive.git'
+
+    pod 'HelloGuardianSDK', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloguardiansdk.git', :branch => 'develop/4.4.5'
+#    pod 'HelloGuardianSDK', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloguardiansdk.git', :branch => 'master'
+#        pod 'HelloGuardianSDK', :path => '../../helloguardiansdk'
+
+    #pod 'HelloTrack', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellotrack.git', :branch => 'master'
+    pod 'HelloTrack', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellotrack.git', :branch => 'develop/4.4.5'
+#        pod 'HelloTrack', :path => '../../hellotrack'
+
+#    pod 'HelloObjective-Zip', :path => '../../helloobjective-zip' #  :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloobjective-zip.git', :tag => 'cs_1'
+    pod 'HelloObjective-Zip',  :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloobjective-zip.git', :branch => 'develop/4.4.5'
+
+#    pod 'HelloASIHttpRequest', :path => '../../HelloASIHttpRequest' # :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloasihttprequest.git', :tag => 'cs_1'
+    pod 'HelloASIHttpRequest', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloasihttprequest.git', :branch => 'develop/4.4.5'
+    
+
+    pod 'HelloTencentSDK', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellotencentsdk.git', :branch => 'master'
+
+    
+    pod 'HelloCategory', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellocategory.git', :branch => 'develop/4.4.5'
+  #  pod 'HelloCategory', :path => '../iOSLib/HelloCategory'
+
+#    pod 'HelloAuth', :path => '../../HelloAuth'
+    pod 'HelloAuth', :git => 'https://git.hellotalk8.com/bitbucket/scm/~brant/helloauth.git'
+    
+    pod 'HelloMBProgressHUD', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellombprogresshud.git'
+#    pod 'HelloMBProgressHUD', :path => '../../MBProgressHUD'
+
+#    pod 'HelloNetwork', :path => '../../hellonetwork'
+    pod 'HelloNetwork', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellonetwork.git', :branch => 'develop/4.4.5'
+
+    pod 'HelloOpenUDID', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloopenudid.git', :branch => 'develop/4.4.5'
+#    pod 'HelloOpenUDID', :path => '../../helloopenudid'
+    
+#    pod 'HelloImageViewer', :path => '../../helloimageviewer'
+    pod 'HelloImageViewer', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloimageviewer.git', :branch => 'develop/4.4.5'
+    
+    pod 'HelloExtensions', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloextensions.git', :branch => 'develop/4.5.1'
+ #     pod 'HelloExtensions', :path => '../iOSLib/helloextensions'
+
+    pod 'HelloImagePicker', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloimagepicker.git', :branch => 'develop/4.4.5'
+#    pod 'HelloImagePicker', :path => '../../helloimagepicker'
+
+    pod 'HelloChat', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellochat.git', :branch => 'master'
+#    pod 'HelloChat', :path => '../../HelloChat'
+    
+#    pod 'HelloLanguageCountryUtils', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellolanguagecountryutils.git', :branch => 'develop/4.4.5'
+#    pod 'HelloLanguageCountryUtils', :path => '../../HelloLanguageCountryUtils'
+
+    pod 'HelloPay', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellopay.git'
+#    pod 'HelloPay', :path => '../../HelloPay'
+
+  pod 'HelloNoviceGuideTask', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellonoviceguidetask2.git'
+  #    pod 'HelloNoviceGuideTask', :path => '../iOSLib/HelloNoviceGuideTask'
+
+    pod 'NTESQuickPass', :git => 'https://github.com/chinabrant/NTESQuickPass.git'
+#    pod 'NTESQuickPass', :path => '../../NTESQuickPass'
+
+  pod 'HelloTalkMeditor', :git => 'https://git.hellotalk8.com/bitbucket/scm/ios/hellotalkmediator.git', :branch => 'master'
+     # pod 'HelloTalkMeditor', :path => '../iOSLib/hellotalkmediator'
+end
+
+def helloPods
+  pod 'HelloLog', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellolog.git', :branch => 'master'
+  pod 'HelloMBProgressHUD', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellombprogresshud.git'
+  pod 'HelloASIHttpRequest', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloasihttprequest.git', :branch => 'master'
+  pod 'HelloGuardianSDK', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloguardiansdk.git', :branch => 'master'
+  pod 'NTESQuickPass', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/ntesquickpass.git', :branch => '3.2.6'
+  pod 'HelloCommon', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellocommon.git', :branch => 'develop/4.5.1'
+  pod 'HelloObjective-Zip',  :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloobjective-zip.git', :branch => 'master'
+  pod 'SSZipArchive', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/ssziparchive.git'
+  pod 'HelloCommonUI', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellocommonui.git',  :branch => 'develop/4.5.1'
+  pod 'HelloURLNavigator', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellourlnavigator.git', :branch => 'develop/4.5.1'
+  pod 'HelloExtensions', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloextensions.git', :branch => 'develop/4.5.1'
+  pod 'HelloTrack', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellotrack.git', :branch => 'master'
+  pod 'HelloCache', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellocache.git', :branch => 'develop/4.5.1'
+  pod 'HelloNetwork', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellonetwork.git', :branch => 'master'
+  pod 'HelloOpenUDID', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/helloopenudid.git', :branch => 'master'
+  pod 'HelloTalkMeditor', :git => 'https://git.hellotalk8.com/bitbucket/scm/ios/hellotalkmediator.git', :branch => 'master'
+  pod 'HelloCategory', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellocategory.git', :branch => 'master'
+  pod 'HelloMultilingual', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellomultilingual.git', :branch => 'master'
+  pod 'HelloMessage', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellomessage.git', :branch => 'develop/4.5.1'
+  pod 'HelloMessageLayer', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellomessagelayer.git', :branch => 'develop/4.5.1'
+  pod 'HelloMediator', :git => 'https://git.hellotalk8.com/bitbucket/scm/ioslib/hellomediator.git', :branch => 'develop/4.5.1'
+  pod 'HelloKeychainUtils', '0.0.2'
+  pod 'SensorsAnalyticsSDK', '~> 2.1.11'
+end
 
 target 'HelloCommonUtils_Example' do
   pod 'HelloCommonUtils', :path => '../'
+  helloPods
+  # helloLoginPods
+  # UI 调试
+  pod 'LookinServer', :configurations => ['Debug', 'Release']
 
   target 'HelloCommonUtils_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 8.0.7'
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 8.0.0'
+  end
+end
+
+pre_install do |installer|
+  # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['EXCLUDED_ARCHS'] = 'armv7 armv7s'
+      config.build_settings['DEFINE_MODULE'] = 'YES'
+      
+      if target.name == 'StreamingKit'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+    end
   end
 end
